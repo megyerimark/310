@@ -12,6 +12,9 @@ export class DiamondComponent implements OnInit {
   perimeter = new FormControl('');
   area = new FormControl('');
 
+  perimeterVisible = false ;
+  areaVisible = false ;
+
   constructor() { }
 
   ngOnInit(): void {
@@ -32,6 +35,8 @@ export class DiamondComponent implements OnInit {
     let area = this. calcArea(aside, alfa);
     this.perimeter.setValue(String(perimeter));
     this.area.setValue(String(area));
+    this.perimeterVisible = true;
+    this.areaVisible= true
   };
 
   calcPerimeter(aside:number) {

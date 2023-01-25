@@ -12,7 +12,7 @@
             (keyup)="oneKuyup($event)">
         </div>
 
-        <div class="mt-3">
+        <div class="mt-3"  *ngIf="perimeterVisible">
             <input type="text"
             readonly
             [formControl]="perimeter"
@@ -21,7 +21,8 @@
             
         </div>
 
-        <div class="mt-3">
+        <div class="mt-3"
+        *ngIf="areaVisible">
             <input type="text"
             readonly
             [formControl]="area"
