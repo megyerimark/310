@@ -29,6 +29,11 @@ export class DiamondComponent implements OnInit {
 
   }
   onEnterHendler() {
+    this.startCalc();
+ 
+  };
+  startCalc(){
+
     let aside = Number(this.aside.value);
     let alfa = Number(this.alfa.value);
     let perimeter = this.calcPerimeter(aside);
@@ -37,7 +42,8 @@ export class DiamondComponent implements OnInit {
     this.area.setValue(String(area));
     this.perimeterVisible = true;
     this.areaVisible= true
-  };
+
+  }
 
   calcPerimeter(aside:number) {
 
@@ -48,6 +54,10 @@ export class DiamondComponent implements OnInit {
     let rad = alfa*Math.PI/180;
     let area=Math.pow(aside,2 )* Math.sin(rad);
     return area;
+
+  }
+  onClickCalcButton(){
+    this.startCalc();
 
   }
 
